@@ -10,7 +10,8 @@ function MovieShow({ movies }) {
       <div>
         {/* And here we access the `movieId` stored in `params` to render 
           information about the selected movie */}
-        <h3>{movies[params.movieId].title}</h3>
+       <h3>{movies[params.movieId].title}</h3>
+        {console.log("this are my movies",(movies))}
       </div>
     );
   }

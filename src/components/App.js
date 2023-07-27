@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import NavBar from "./NavBar";
 import MoviesPage from "./MoviesPage";
+import MovieShow from "./MovieShow";
 
 function App() {
   const [movies, setMovies] = useState({
@@ -14,7 +15,8 @@ function App() {
     <div>
       <NavBar />
       <Routes>
-      <Route path="/movies" element={<MoviesPage movies={movies}/>}/>
+        <Route path="/movies/:movieId" element={<MovieShow movies={movies}/>}/>
+        <Route path="/movies" element={<MoviesPage movies={movies}/>}/>
         <Route path="/" element={<div>Home</div>} />
       </Routes>
     </div>
